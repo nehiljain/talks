@@ -4,7 +4,8 @@
 # Why does it matter?
 
 
-# Ecosystem
+# Domains in Data Ecosystem
+
     - Data Science
     - Data Engineering
     - Machine Learning
@@ -13,10 +14,40 @@
 
 # What is an analyst's role?
 
+    - Reporting
+    - Finding business insights
+    - Maintain parts of the data warehouse
+    - Skills
+      - Programming (R/SAS/Python)
+      - Data Visualization
+      - Effective Communication
+      - Database Querying SQL
+      - GIT
+      - CLI
+      - SDLC
+
 # Past, Present, Future
+
+Past
+- Excel/Tableau
+- SQL
+
+Present
+- R/Python, GIT, SDLC
+
+Future
+- ??
 
 # What makes a good analytics engineer?
 
+- Learn to work with Large datasets
+- Relational Database Design
+- Data Testing
+- Plug and Play systems
+  - Stitch
+  - DBT
+  - Snowflake, Big Query
+  - Looker, Tableau, Mode
 
 # Is it real?
 
@@ -25,7 +56,7 @@
 - https://share.getcloudapp.com/Z4uLA2pW
 - https://www.spotifyjobs.com/search-jobs/#search=analytics+engineer
 
-# Reosurces 
+# Resources 
 
 - https://blog.getdbt.com/hiring-analytics-engineer/
 - https://blog.getdbt.com/what-is-an-analytics-engineer/
