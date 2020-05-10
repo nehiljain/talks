@@ -1,16 +1,45 @@
 # What is analytics engineering?
 
+- Data Warehousing
+- Data Modeling
+- BI Dashboarding
 
 # Why does it matter?
 
+- It is rapidly evolving
+- Self-serve models
+- Organisational complexity is hard
+- Empathise with data something people
 
 # Domains in Data Ecosystem
 
     - Data Science
+      - Everything!!
+      - Build Train and Deploy models
+      - Find insights
+  
     - Data Engineering
-    - Machine Learning
-    - Devops
+      - Integrate systems to get data from one place to another
+      - Setup infrastructure and monitoring
+    
+    - Machine Learning Engineering
+      - Producitonize models
+    
     - Full Stack Engineer
+      - Integrate the model in the app
+
+# Past, Present, Future
+
+Past
+- Excel/Tableau
+- SQL
+
+Present
+- R/Python, GIT, SDLC
+
+Future
+- ??
+
 
 # What is an analyst's role?
 
@@ -25,18 +54,8 @@
       - GIT
       - CLI
       - SDLC
+        - Testing
 
-# Past, Present, Future
-
-Past
-- Excel/Tableau
-- SQL
-
-Present
-- R/Python, GIT, SDLC
-
-Future
-- ??
 
 # What makes a good analytics engineer?
 
