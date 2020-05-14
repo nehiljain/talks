@@ -1,0 +1,37 @@
+## The path to your markdown files.
+## One markdown file holds one presentation
+MarkdownPath="./analytics-engineering/"
+
+## Whatever you want to show as text when including /svg/footer-text.svg
+## By default shown in the lower right corner
+FooterText="Nehil Jain"
+
+## The port to bind on. You should use localhost as host
+ListenOn="localhost:8080"
+
+## Optional: Path to your own template.
+## Needs the index.html holding remarkjs, an info.md as starting point and footer-text.svg 
+# TemplatePath="./templates"
+
+## Optional: path to the templates static files
+## Holds css, js, fonts and images used in your template
+# StaticFiles="./static"
+
+## Optional, define your own Executors for running code from the presentation
+# CustomExecutors="./presla-executors"
+
+## Can be set to "debug", defaults to "warning": Set log level to debug
+# LogLevel="debug"
+
+## Can be set to "json", defaults to "text": Set log format to debug
+# LogFormat="json"
+
+## Controls if presla looks for a newer version on start
+# CheckUpdateOnStart=true
+
+## Optional, can be used multiple times
+## This way you can specify a template used for only one presentation
+# [[Presentations]]
+# PresentationName="my_presentation"
+# TemplatePath="./presla-theme-my-presentation/static"
+# StaticFiles="./presla-theme-my-presentation/templates"
