@@ -40,12 +40,57 @@
 
 ## A modern analytics stack
 
+![](https://blog.getdbt.com/content/images/downloaded_images/What--exactly--is-dbt-/1-BogoeTTK1OXFU1hPfUyCFw.png)
+
+Salient Features
+- Consolidated data ingestion: Stitch Fivetran
+- Data warehouse as service: Redshift, BigQuery, Snowflake
+- ETL -> ELT
+- DBT to transform
+- Mode, Looker, Sisense
 
 ---
 
 
 ## A modern data team
 
+### Data Eng
+
+- Build custom data integration
+- Manage Data Platform
+- Data warehouse optimization
+- Develop ML endpoints
+- Data Security
+
+---
+
+
+## A modern data team
+
+### Data Eng
+
+### Data science
+
+- Domain expertise with data
+- Answer deep insight work
+- Build specialised charts/reports
+- Predictions/Insights
+
+---
+
+
+## A modern data team
+
+### Data Eng
+
+### Data science
+
+### Analytics Engineer
+
+- Provide clean and modeled data for analysis
+- SDLC to Analytics
+- Build data catalog
+- Build self-serve BI platform and educate org
 
 
 ---
