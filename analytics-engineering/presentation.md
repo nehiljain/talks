@@ -8,7 +8,6 @@
 - Early adopters of Snowflake + DBT stack in Toronto
 - Love advising/helping people
 
-^ 
 ---
 
 ## Journey so far - Data Storage
@@ -38,6 +37,11 @@
 
 ## Journey so far - Data Teams
 
+![FIT](https://nehiljain.com/images/data-team-old.png)
+
+
+
+
 - Pre-CDW era, compute was expensive or complex
 - few or even 1 data team
 - Bottle necks
@@ -46,6 +50,32 @@
 - Build new datasets from existing data sets
 
 
+
+
+---
+
+## Journey so far - Data Teams
+
+![FIT](https://nehiljain.com/images/data-team-old.png)
+
+
+- Pre-CDW era, compute was expensive or complex
+- few or even 1 data team
+- Bottle necks
+- Away from domain experts
+- No one to Augment metadata for business/domain perspective
+- Build new datasets from existing data sets
+
+## Journey so far - Data Teams
+
+![FIT](https://nehiljain.com/images/data-team-new.png)
+
+- Domain experts to work on data from source
+
+- Productionisation of reports
+
+^ Quick Feedback loop
+^ Missing data has meaning
 ---
 
 ## A modern analytics stack
