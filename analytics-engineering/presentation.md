@@ -27,20 +27,23 @@
 
 ## Journey so far - Analytics
 
+![FIT](https://nehiljain.com/images/journey-analytics.png)
+
 - Excel, Tableau
 
 - Self-serve and data literacy
 - SSOT
 - Usecases of data in biz exploding
 
+^ evolved over time, in part to see where it’s been, and more importantly, to see where it’s going next.
+^ Data Dictatorship: Confiened/controlled and specialised, time to insights rendered them stale/irrelevant
+^ Definition of data itself changes, big data
+^ 
 ---
 
 ## Journey so far - Data Teams
 
 ![FIT](https://nehiljain.com/images/data-team-old.png)
-
-
-
 
 - Pre-CDW era, compute was expensive or complex
 - few or even 1 data team
@@ -48,9 +51,6 @@
 - Away from domain experts
 - No one to Augment metadata for business/domain perspective
 - Build new datasets from existing data sets
-
-
-
 
 ---
 
@@ -121,7 +121,6 @@ Salient Features
 - SDLC to Analytics
 - Build data catalog
 - Build self-serve BI platform and educate org
-
 
 ---
 
