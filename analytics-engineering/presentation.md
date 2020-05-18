@@ -8,10 +8,12 @@
 - Early adopters of Snowflake + DBT stack in Toronto
 - Love advising/helping people
 
+^ 
 ---
 
 ## Journey so far - Data Storage
 
+![](https://p91.f3.n0.cdn.getcloudapp.com/items/6qu5A9wk/Image%202020-05-17%20at%2010.16.35%20PM.png)
 - Image for MPP in the cloud
 - Benifits
   - Costs
@@ -19,7 +21,9 @@
   - Variety
   - Velocity
 
-
+^ near zero maintanence
+^ Fast answers
+^ All data and users
 ---
 
 ## Journey so far - Analytics
@@ -34,13 +38,19 @@
 
 ## Journey so far - Data Teams
 
--
+- Pre-CDW era, compute was expensive or complex
+- few or even 1 data team
+- Bottle necks
+- Away from domain experts
+- No one to Augment metadata for business/domain perspective
+- Build new datasets from existing data sets
+
 
 ---
 
 ## A modern analytics stack
 
-![](https://blog.getdbt.com/content/images/downloaded_images/What--exactly--is-dbt-/1-BogoeTTK1OXFU1hPfUyCFw.png)
+![FIT](https://blog.getdbt.com/content/images/downloaded_images/What--exactly--is-dbt-/1-BogoeTTK1OXFU1hPfUyCFw.png)
 
 Salient Features
 - Consolidated data ingestion: Stitch Fivetran
@@ -56,6 +66,7 @@ Salient Features
 
 ### Data Eng
 
+- Enablers
 - Build custom data integration
 - Manage Data Platform
 - Data warehouse optimization
@@ -95,13 +106,18 @@ Salient Features
 
 ---
 
-## Things we should need discussion
+## Things I propose we tease out
 
-- Monolith vs Domain Specific
-- Data as a service vs  Data as a product
-- Observability in Data
 - Best Practices to structure analytics repos/projects
+- Monolith vs Domain Specific
+- Data as a service vs Data as a product
+- Data Democratization
+- Observability in Data
 
+
+^ New field, lots to learn
+^ Talking to Ritual, Shopify, Drop, Rubikloud 
+^ Unique projects and learning
 ---
 
 ## Future
