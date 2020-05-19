@@ -1,18 +1,32 @@
-# What is Analytics engineering?
+autoscale: true
+
+---
+
+
+# What is
+# Analytics Engineering?
 
 ---
 
 ## About me
 
 - Lead data @ SnapTravel
-- Early adopters of Snowflake + DBT stack in Toronto
+- Stitch + Snowflake + DBT stack
 - Love advising/helping people
+
+^ Early adopters of dbt and snowflake
+
+---
+## Journey so far - Data Storage
 
 ---
 
-## Journey so far - Data Storage
+![Fit](https://nehiljain.com/images/journey-cdw2020.png)
 
-![](https://p91.f3.n0.cdn.getcloudapp.com/items/6qu5A9wk/Image%202020-05-17%20at%2010.16.35%20PM.png)
+---
+
+![Fit, Fiitered](https://nehiljain.com/images/journey-cdw2020.png)
+
 - Image for MPP in the cloud
 - Benifits
   - Costs
@@ -23,48 +37,55 @@
 ^ near zero maintanence
 ^ Fast answers
 ^ All data and users
+
 ---
 
 ## Journey so far - Analytics
 
+---
+
 ![FIT](https://nehiljain.com/images/journey-analytics.png)
 
-- Excel, Tableau
-
-- Self-serve and data literacy
-- SSOT
-- Usecases of data in biz exploding
 
 ^ evolved over time, in part to see where it’s been, and more importantly, to see where it’s going next.
 ^ Data Dictatorship: Confiened/controlled and specialised, time to insights rendered them stale/irrelevant
 ^ Definition of data itself changes, big data
-^ 
+^ - Excel, Tableau - Self-serve and data literacy - SSOT- Usecases of data in biz exploding
+
 ---
 
 ## Journey so far - Data Teams
 
-![FIT](https://nehiljain.com/images/data-team-old.png)
+---
 
-- Pre-CDW era, compute was expensive or complex
-- few or even 1 data team
-- Bottle necks
+![inline](https://nehiljain.com/images/data-team-old.png)
+
+- Compute was expensive or complex
+- Few Data team(s)
+- Slow and bottleneck
 - Away from domain experts
-- No one to Augment metadata for business/domain perspective
-- Build new datasets from existing data sets
 
 ---
 
+![inline](https://nehiljain.com/images/data-team-new.png)
 
-## Journey so far - Data Teams
-
-![FIT](https://nehiljain.com/images/data-team-new.png)
 
 - Domain experts to work on data from source
-
-- Productionisation of reports
+- Collaborate via metadata
+- Nimble
+- Reuseable reports
 
 ^ Quick Feedback loop
 ^ Missing data has meaning
+
+---
+
+## A modern analytics stack
+
+---
+
+![FIT](https://blog.getdbt.com/content/images/downloaded_images/What--exactly--is-dbt-/1-BogoeTTK1OXFU1hPfUyCFw.png)
+
 ---
 
 ## A modern analytics stack
@@ -73,54 +94,62 @@
 
 Salient Features
 - Consolidated data ingestion: Stitch Fivetran
-- Data warehouse as service: Redshift, BigQuery, Snowflake
+- Data warehouse as service
 - ETL -> ELT
 - DBT to transform
 - Mode, Looker, Sisense
 
 ---
 
+## A modern data team
+
+| Data Engineer | Analytics Engineer  | Data Scientist  |
+-----------| :----------- | -----------: |
+Enablers       |          |
+Custom Data Integration       |   |
+Data Platform       |     |
+DW Optimization       |   |
+ML endpoints       |    |
+Data Security       |       |
+
+
+^ Enablers, Build custom data integration, Manage Data Platform, Data warehouse optimization, Develop ML endpoints
+
+---
 
 ## A modern data team
 
-### Data Eng
+| Data Engineer | Analytics Engineer  | Data Scientist  |
+-----------| :----------- | -----------: |
+Enablers       |          |     Domain expertise with data
+Custom Data Integration       |        |     Deep insight work
+Data Platform       |          |     Predictions/Insights
+DW Optimization       |        |     Staticical/ML algos to solve business problems
+ML endpoints       |          |
+Data Security       |       |
 
-- Enablers
-- Build custom data integration
-- Manage Data Platform
-- Data warehouse optimization
-- Develop ML endpoints
-- Data Security
+^ Domain expertise with data, Answer deep insight work,  Build specialised charts/report,  Predictions/Insights
 
 ---
 
 
+
 ## A modern data team
 
-### Data Eng
+| Data Engineer | Analytics Engineer  | Data Scientist  |
+-----------| :----------- | -----------: |
+Enablers       |     **Clean and Modeled data**    |     Domain expertise with data
+Custom Data Integration       |   **SDLC Analytics**    |     Deep insight work
+Data Platform       |     **Data catalog**    |     Predictions/Insights
+DW Optimization       |   **Self-serve BI platform**    |     Staticical/ML algos to solve business problems
+ML endpoints       |     **Educate**    |
+Data Security       |       |
 
-### Data science
-
-- Domain expertise with data
-- Answer deep insight work
-- Build specialised charts/reports
-- Predictions/Insights
+^ Provide clean and modeled data for analysis, SDLC to Analytics, Build data catalog, Build self-serve BI platform and educate org
 
 ---
 
-
-## A modern data team
-
-### Data Eng
-
-### Data science
-
-### Analytics Engineer
-
-- Provide clean and modeled data for analysis
-- SDLC to Analytics
-- Build data catalog
-- Build self-serve BI platform and educate org
+![Fit](https://nehiljain.com/images/analytics-engineer-postings.gif)
 
 ---
 
@@ -134,8 +163,9 @@ Salient Features
 
 
 ^ New field, lots to learn
-^ Talking to Ritual, Shopify, Drop, Rubikloud 
+^ Talking to Ritual, Shopify, Drop, Rubikloud
 ^ Unique projects and learning
+
 ---
 
 ## Future
