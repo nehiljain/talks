@@ -26,15 +26,16 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 
 [.background-color: #FFFFFF]
 
-![Fit](https://nehiljain.com/images/journey-cdw2.png)
+![Fit](https://nehiljain.com/images/journey-cdw-2.png)
 
 ---
 
-[.background-color: #cbcccb]
+[.background-color: #686868 ]
 
-![Fit, Fiitered](https://nehiljain.com/images/journey-cdw-faded.png)
+![Fit, Fiitered](https://nehiljain.com/images/journey-cdw-faded-3.png)
 
-- MPP in the cloud
+## MPP in the cloud
+
 - Benefits
   - Costs
   - Low Infra complexity
@@ -104,25 +105,34 @@ Still lot of uncertainity
 
 ## A modern analytics stack
 
-![FIT](https://blog.getdbt.com/content/images/downloaded_images/What--exactly--is-dbt-/1-BogoeTTK1OXFU1hPfUyCFw.png)
+[.background-color: #686868 ]
 
-Salient Features
-- DI as a service
-- DW as service
-- ELT
-- Mode, Looker, Sisense
+![FIT](https://nehiljain.com/images/modern-stack-faded-2.png)
+
+- Salient Features
+  - DI as a service
+  - DW as service
+  - ELT
+  - Mode, Looker, Sisense
+
+---
+
+[.background-color: #686868 ]
+
+![FIT](https://nehiljain.com/images/analytics-engineering-2.png)
+
 
 ---
 
 ## A modern data team
 
-| Data Engineer | Analytics Engineer  | Data Scientist  |
+| D. Engineer | D. Analyst/Scientist  | Analytics Engineer |
 -----------| :----------- | -----------: |
-Enablers       |          |
-Custom Data Integration       |   |
-Data Platform       |     |
-DW Optimization       |   |
-ML endpoints       |    |
+Enablers       |         |
+Custom Data Integration       |     |
+Data Platform       |      |
+DW Optimization       |     |
+ML endpoints       |         |
 
 
 ^ Enablers,
@@ -135,13 +145,13 @@ Develop ML endpoints
 
 ## A modern data team
 
-| Data Engineer | Analytics Engineer  | Data Scientist  |
+| D. Engineer | D. Analyst/Scientist  | Analytics Engineer |
 -----------| :----------- | -----------: |
-Enablers       |          |     Domain expertise with data
-Custom Data Integration       |        |     Deep insight work
-Data Platform       |          |   A/B Experiments
-DW Optimization       |        |     Statistical/ML algos to solve business problems
-ML endpoints       |          |
+Enablers       |     Domain expertise with data    |
+Custom Data Integration       |   Deep insight work    |
+Data Platform       |     A/B Experiments   |
+DW Optimization       |   Staticical/ML algos to solve business problems    |
+ML endpoints       |         |
 
 ^ Domain expertise with data,
 Answer deep insight work,
@@ -153,13 +163,13 @@ Predictions/Insights
 
 ## A modern data team
 
-| Data Engineer | Analytics Engineer  | Data Scientist  |
+| D. Engineer | D. Analyst/Scientist  | Analytics Engineer |
 -----------| :----------- | -----------: |
-Enablers       |     **Clean and Modeled data**    |     Domain expertise with data
-Custom Data Integration       |   **SDLC Analytics**    |     Deep insight work
-Data Platform       |     **Data catalog**    |     Predictions
-DW Optimization       |   **Self-serve BI platform**    |     Staticical/ML algos to solve business problems
-ML endpoints       |     **Educate**    | A/B Experiments
+Enablers       |     Domain expertise with data    |     **Clean and Modeled data**
+Custom Data Integration       |   Deep insight work    |     **SDLC Analytics**
+Data Platform       |     A/B Experiments   |     **Data catalog**
+DW Optimization       |   Staticical/ML algos to solve business problems    |     **Self-serve BI platform**
+ML endpoints       |         | **Educate**
 
 ^ Provide clean and modeled data for analysis,
 SDLC to Analytics,
@@ -175,7 +185,7 @@ Build self-serve BI platform and educate org
 
 ## Things I propose we tease out
 
-- Best practices to setup analytics projects
+- Best practices to setup an analytics project
 - How to structure data teams?
 - Data as a service vs Data as a product
 - Data democratization strategies
@@ -191,3 +201,7 @@ Build self-serve BI platform and educate org
 ## Future
 
 #### Where do we go from here?
+
+---
+
+## Q & A
