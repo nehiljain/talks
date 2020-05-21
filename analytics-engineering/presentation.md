@@ -16,10 +16,12 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 - Love helping people get value from data
 
 
-
-^ Early adopters of dbt and snowflake
+^ data person
+^ early adopters of dbt and snowflake
+^ questions in the end
 
 ---
+
 ## Journey so far - Data Storage
 
 ---
@@ -52,6 +54,8 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 
 ## Journey so far - Analytics
 
+^ Shift in analytics
+
 ---
 
 [.background-color: #FFFFFF]
@@ -63,7 +67,11 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 ^ evolved over time, in part to see where it’s been, and more importantly, to see where it’s going next.
 ^ Data Dictatorship: Confiened/controlled and specialised, time to insights rendered them stale/irrelevant
 ^ Definition of data itself changes, big data
-^ - Excel, Tableau - Self-serve and data literacy - SSOT- Usecases of data in biz exploding
+^ - Excel, Tableau
+Usecases of data in biz exploding
+Self-serve and data literacy
+SSOT
+
 
 ---
 
@@ -119,8 +127,15 @@ Still lot of uncertainity
 
 [.background-color: #686868 ]
 
+## Analytics Engineering
+
 ![FIT](https://nehiljain.com/images/analytics-engineering-2.png)
 
+
+^ Production grade ELT code
+Code integration and testing
+Collab with DE on ingestion
+Internal tools for DS/DA
 
 ---
 
@@ -205,3 +220,15 @@ Build self-serve BI platform and educate org
 ---
 
 ## Q & A
+
+
+---
+
+## Good Reads
+
+- https://blog.getdbt.com/what--exactly--is-dbt-/
+- https://blog.getdbt.com/what-is-an-analytics-engineer/
+- https://blog.getdbt.com/hiring-analytics-engineer/
+- https://www.kdnuggets.com/2019/02/analytics-engineer-data-team.html
+- https://towardsdatascience.com/the-evolution-of-analytics-with-data-8b9908deadd7
+- https://www.forbes.com/sites/danwoods/2017/02/07/snowflakes-vision-for-the-rebirth-of-the-data-warehouse/#3b7d2f5a5d4d
