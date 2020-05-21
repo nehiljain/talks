@@ -26,13 +26,13 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 
 [.background-color: #FFFFFF]
 
-![Fit](https://nehiljain.com/images/journey-cdw2020.png)
+![Fit](https://nehiljain.com/images/journey-cdw2.png)
 
 ---
 
-[.background-color: #FFFFFF]
+[.background-color: #cbcccb]
 
-![Fit, Fiitered](https://nehiljain.com/images/journey-cdw2020.png)
+![Fit, Fiitered](https://nehiljain.com/images/journey-cdw-faded.png)
 
 - MPP in the cloud
 - Benefits
@@ -70,7 +70,7 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 
 ---
 
-![inline, 90%](https://nehiljain.com/images/data-team-old.png)
+![inline](https://nehiljain.com/images/data-team-old.png)
 
 - Compute was expensive or complex
 - Few Data team(s)
@@ -80,7 +80,7 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 
 ---
 
-![inline, 90%](https://nehiljain.com/images/data-team-new.png)
+![inline](https://nehiljain.com/images/data-team-new.png)
 
 
 - Domain experts close to data
