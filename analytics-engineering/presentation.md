@@ -11,8 +11,8 @@ autoscale: true
 ## About me
 
 - Lead data @ SnapTravel
-- Stitch + Snowflake + DBT stack
-- Love advising/helping people
+- Stitch + Airflow + Snowflake + DBT stack
+- Love helping people build their data stacks
 
 ^ Early adopters of dbt and snowflake
 
@@ -21,18 +21,21 @@ autoscale: true
 
 ---
 
+[.background-color: #FFFFFF]
+
 ![Fit](https://nehiljain.com/images/journey-cdw2020.png)
 
 ---
 
 ![Fit, Fiitered](https://nehiljain.com/images/journey-cdw2020.png)
 
-- Image for MPP in the cloud
-- Benifits
+- MPP in the cloud
+- Benefits
   - Costs
+  - Low Infra complexity
   - SQL
-  - Variety
-  - Velocity
+  - Variety, Velocity
+
 
 ^ near zero maintanence
 ^ Fast answers
@@ -123,8 +126,8 @@ Data Security       |       |
 -----------| :----------- | -----------: |
 Enablers       |          |     Domain expertise with data
 Custom Data Integration       |        |     Deep insight work
-Data Platform       |          |     Predictions/Insights
-DW Optimization       |        |     Staticical/ML algos to solve business problems
+Data Platform       |          |   A/B Experiments
+DW Optimization       |        |     Statistical/ML algos to solve business problems
 ML endpoints       |          |
 Data Security       |       |
 
@@ -140,9 +143,9 @@ Data Security       |       |
 -----------| :----------- | -----------: |
 Enablers       |     **Clean and Modeled data**    |     Domain expertise with data
 Custom Data Integration       |   **SDLC Analytics**    |     Deep insight work
-Data Platform       |     **Data catalog**    |     Predictions/Insights
+Data Platform       |     **Data catalog**    |     Predictions
 DW Optimization       |   **Self-serve BI platform**    |     Staticical/ML algos to solve business problems
-ML endpoints       |     **Educate**    |
+ML endpoints       |     **Educate**    | A/B Experiments
 Data Security       |       |
 
 ^ Provide clean and modeled data for analysis, SDLC to Analytics, Build data catalog, Build self-serve BI platform and educate org
@@ -155,11 +158,11 @@ Data Security       |       |
 
 ## Things I propose we tease out
 
-- Best Practices to structure analytics repos/projects
-- Monolith vs Domain Specific
+- Best practices to structure analytics repos/projects
+- How to structure data teams?
 - Data as a service vs Data as a product
-- Data Democratization
-- Observability in Data
+- Data democratization strategies
+- Observability/Trust in Data
 
 
 ^ New field, lots to learn
