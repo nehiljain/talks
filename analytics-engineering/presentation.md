@@ -1,8 +1,6 @@
 autoscale: true
 footer: Twitter: @nehiljain, Website: nehiljain.com
 [.hide-footer]
----
-
 
 # What is
 # Analytics Engineering?
