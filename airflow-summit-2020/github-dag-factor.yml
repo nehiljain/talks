@@ -8,16 +8,38 @@ airflow_github_dag:
   default_view: 'graph'
   tasks:
     extract_load:
-      operator: airflow.operators.bash_operator.BashOperator
-      bash_command: 'echo 1'
+      operator: airflow.operators.singer_operator.SingerOperator
+
+      singer_tap:
+        name: tap-freshdesk
+        repo: https://github.com/snaptravel/tap-freshdesk
+        api_key: config.freskdesk_tap.api_key
+        start_date: config.freskdesk_tap.start_date
+        domain: config.freskdesk_tap.domain
+        request_delay: config.freskdesk_tap.request_delay
+
+      singer_target:
+        name: target-snowflake
+        repo: https://github.com/transferwise/pipelinewise-target-snowflake
+        account: config.target_snowflake.account
+        dbname: config.target_snowflake.dbname
+        user: config.target_snowflake.user
+        password: config.target_snowflake.password
+        warehouse: config.target_snowflake.warehouse
+        s3_bucket: config.target_snowflake.s3_bucket
+        default_target_schema: config.target_snowflake.target_schema
+
     test_el:
       operator: airflow.operators.bash_operator.BashOperator
       bash_command: 'echo 2'
       dependencies: [task_1]
+
     transform:
       operator: airflow_dbt.operators.DbtRunOperator
+      repo:
       bash_command: 'echo 3'
       dependencies: [task_1]
+
     test_transform:
       operator: airflow_dbt.operators.DbtTestOperator
       bash_command: 'echo 3'
