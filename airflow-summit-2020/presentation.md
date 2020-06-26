@@ -1,15 +1,7 @@
 # Building Reuseable and Trustworthy ELT pipelines
 ## A templated approach
 
----
 
-## So much debt
-
-1. Solve the same problem again and again
-2. Undocumented and Untested final result
-3. Most breakages are caused by other people
-
----
 
 ## Stories
 
@@ -23,10 +15,28 @@
 ^
 hire data engineer per data analyst
 
+
+---
+
+## So much debt
+
+1. Solve the same problem again and again
+2. Undocumented and Untested final result
+3. Most breakages are caused by other people
+4. Downfall of the data engineer
+   1. You get attention when things are broken
+
+
+---
+
+
 ---
 
 ## The Big Idea
 
+Design Pattern with implementation/example
+Our jobs is to built frameworks and **infra**
+Meta data engineering
 Standardization
 Define a dag
 SSOT Dag
@@ -42,15 +52,22 @@ Who does this appeal to
 2. Goals
    1. Weekly/Monthly metrics
    2.
+3. meta data engineering
+4. config ad code
 
 ---
 
 ## ETL vs ELT
 
-analysts are closest to the business
-people solving the problem can solve it
-sas companies have a lot of data sources
+- analysts are closest to the business
+- sas companies have a lot of data sources
+- Brittle components ~ Agile decision making
+- Reduced complexity
+- Reduce cost
 
+
+^
+- people solving the problem can solve it
 ---
 
 ## EL - Singer
@@ -87,6 +104,8 @@ sas companies have a lot of data sources
 
 ## Testing - GE
 
+- Trigger the dag after the source passes data checks
+
 ---
 
 ## Bring it all together
@@ -95,8 +114,6 @@ Glue it all together
 Airflow does what it does best - Orchestrate
 Operators for all the above
 Yaml declaration for dry
-
-
 
 ---
 
@@ -108,6 +125,15 @@ Yaml declaration for dry
 4. Auto-Docs
 
 ---
+
+## Some problems it doesnt solve
+
+- Making analytics folks write enough/good data tests
+- Operational creep
+-
+
+---
+
 
 ## Future
 
