@@ -1,15 +1,17 @@
-theme: Poster, 3
-text: #ffffff, alignment(left), line-height(0.9), text-scale(1.0), Roboto Regular
-header: #ffffff, alignment(center), line-height(0.7), text-scale(1.0), Rubik Medium
+theme: Poster, 7
+text: #000000, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue
+header: #000000, alignment(center), line-height(0.7), text-scale(1.0), Rubik Medium
 
-for color scheme https://www.slideteam.net/color-palette-for-presentation-blue-and-yellow.html
 ---
+[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
+[.background-color: #000000]
 
 # [fit] Building <br> Reusable  and  Trustworthy <br> ELT pipelines
-### A templated approach
-
 
 ---
+
+[.header: #000000, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
+
 
 ## Hello 👋!
 
@@ -18,6 +20,9 @@ for color scheme https://www.slideteam.net/color-palette-for-presentation-blue-a
 - ![inline](https://nehiljain.com/images/stitch-icon.png) + ![inline](https://nehiljain.com/images/airflow-icon.png) + ![inline](https://surveymonkey-assets.s3.amazonaws.com/survey/280222649/324d7fd3-51ee-4548-91f7-a1dffbd9b555.png) + ![inline](https://raw.githubusercontent.com/PrefectHQ/prefect/master/docs/.vuepress/public/logos/dbt.png) stack
 
 ---
+
+[.header: #FCA831, alignment(center), line-height(1.0), text-scale(0.6), Rubik Medium]
+[.background-color: #03488B]
 
 ## Who is a <br> data engineer?
 
@@ -33,34 +38,38 @@ for color scheme https://www.slideteam.net/color-palette-for-presentation-blue-a
 
 ---
 
-# Been there felt that?
+[.header: #FCA831, alignment(center), line-height(0.7), text-scale(0.6), Rubik Medium]
+[.background-color: #03488B]
+
+## Been there felt that?
 
 
 ---
 
 ## 🙋 Been there felt that? 🙋‍♂️
 
-1. Cannot scale Data Analytics
-2. Toil
-3. Data Trust
-4. Data Discovery
-5. Throw over the boundary
+- Cannot scale Data Analytics
+- Toil
+- Data Trust
+- Data Discovery
+- Throw over the boundary, ambiguous ownership
 
 ^
-- Data pipeline vendors don't have IAC
-  - multiple consoles
+- Hire data engineer per data analyst
+- You get attention when things are broken
+- ambiguous ownership
 - Testing
 - Documentation
-- Hire data engineer per data analyst
 
 ---
 
 ## So much debt
 
-0. You get attention when things are broken
-1. Solve the same problem again and again
-2. Undocumented and Untested final result
-3. Most breakages are caused by other people
+
+- Solve the same problem again and again
+- Undocumented and Untested final result
+- Most breakages are caused by other people
+- Data integration vendors don't have IAC
 
 ---
 
@@ -69,11 +78,10 @@ for color scheme https://www.slideteam.net/color-palette-for-presentation-blue-a
 
 ---
 
-## My approach
+## Design Requirements
 
 ---
 
-# Super fast analytics
 
 ![](https://i.ibb.co/W25hyxM/no-patience-amazon.jpg)
 
@@ -104,7 +112,7 @@ for color scheme https://www.slideteam.net/color-palette-for-presentation-blue-a
 ## The Big Idea
 
 - Airflow + Other OSS
-- Reduce barrier to entry for data analytics
+- Low barrier to entry for data analytics
 - Convert data pipeline from liabilities to assets
 
 ^
@@ -122,7 +130,86 @@ for color scheme https://www.slideteam.net/color-palette-for-presentation-blue-a
 
 ---
 
+## A templated approach
+
+---
+
+```yaml
+
+version: 1
+send_anonymous_usage_stats: true
+project_id: 85d9741e-9e24-4178-a48c-2ac05e886fc1
+plugins:
+  extractors:
+  - name: tap-github
+    namespace: tap_github
+    pip_url: tap-github
+    executable: tap-github
+    capabilities:
+    - discover
+    - properties
+  loaders:
+  - name: target-postgres
+    pip_url: git+https://github.com/meltano/target-postgres.git
+  orchestrators:
+  - name: airflow
+    pip_url: wtforms==2.2.1 apache-airflow==1.10.2
+  files:
+  - name: airflow
+    pip_url: git+https://gitlab.com/meltano/files-airflow.git
+schedules:
+- name: gitlab-to-postgres
+  extractor: tap-github
+  loader: target-postgres
+  transform: skip
+  interval: '@hourly'
+  start_date: 2020-07-05 00:00:00
+```
+
+---
+
 ## ETL vs ELT
+
+```yaml
+
+version: 1
+send_anonymous_usage_stats: true
+project_id: 85d9741e-9e24-4178-a48c-2ac05e886fc1
+plugins:
+  extractors:
+  - name: tap-github
+    namespace: tap_github
+    pip_url: tap-github
+    executable: tap-github
+    capabilities:
+    - discover
+    - properties
+  loaders:
+  - name: target-postgres
+    pip_url: git+https://github.com/meltano/target-postgres.git
+  orchestrators:
+  - name: airflow
+    pip_url: wtforms==2.2.1 apache-airflow==1.10.2
+  files:
+  - name: airflow
+    pip_url: git+https://gitlab.com/meltano/files-airflow.git
+schedules:
+- name: gitlab-to-postgres
+  extractor: tap-github
+  loader: target-postgres
+  transform: skip
+  interval: '@hourly'
+  start_date: 2020-07-05 00:00:00
+```
+
+- SAS companies have a lot of data sources
+- Agile decision making
+- Reduced complexity
+- Reduce cost
+- Timing of data supply vs data engineer vs data analyst vs business owner
+
+
+^
 
 - analysts are closest to the business
 - SAS companies have a lot of data sources
@@ -155,18 +242,39 @@ for color scheme https://www.slideteam.net/color-palette-for-presentation-blue-a
   - Documentation
 
 ^
-- unix inspired
-- json
-- language agnostic
+- Unix inspired
+- JSON
+- language-agnostic
 
 ---
 
 ## T - DBT
 
+
 - What is DBT?
-- Maintainable SQL
-- Modular code
-- Scale best practices
+
+![inline](https://p91.f3.n0.cdn.getcloudapp.com/items/yAuYnKOk/Image%202020-07-07%20at%206.46.26%20pm.png?v=9ca3e6c736f212c269f9d4cd014467bf)
+
+
+^
+- dbt model -> SQL statement
+  - relationships between models
+- Transformations in SQL
+  - SQL low learning curve
+
+---
+
+## T - DBT
+
+- Why DBT?
+  - Modular code
+  - Testing is 1st Class
+  - Data documentation support
+  - De-coupled read vs write location
+  - Great adoption
+
+
+^
 - Reusable consistent analytics code
 - Simple incremental models for big data
 - Cross-org analytics
@@ -183,73 +291,33 @@ for color scheme https://www.slideteam.net/color-palette-for-presentation-blue-a
 
 - Airflow is the glue to bring the ecosystem together
 
-```yaml
-
-version: 1
-send_anonymous_usage_stats: true
-project_id: 85d9741e-9e24-4178-a48c-2ac05e886fc1
-plugins:
-  extractors:
-  - name: tap-github
-    namespace: tap_github
-    pip_url: tap-github
-    executable: tap-github
-    capabilities:
-    - discover
-    - properties
-  loaders:
-  - name: target-postgres
-    pip_url: git+https://github.com/meltano/target-postgres.git
-  orchestrators:
-  - name: airflow
-    pip_url: wtforms==2.2.1 apache-airflow==1.10.2
-  files:
-  - name: airflow
-    pip_url: git+https://gitlab.com/meltano/files-airflow.git
-schedules:
-- name: gitlab-to-postgres
-  extractor: tap-github
-  loader: target-postgres
-  transform: skip
-  interval: '@hourly'
-  start_date: 2020-07-05 00:00:00
-
-```
 ---
-
-## EL - Singer - Lacking
-
-- Reliable production deployments
-- Workflow and community engagement
-- Catalog
-
-
----
-
-## Benefits of this approach
-
-1. Easily to debug code
-2. Speed to delivery
-3. Tests
-4. Auto-Docs
-
----
+[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
+[.background-color: #000000]
+[.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue ]
 
 ## Some problems it doesn't solve
 
-- Analytics code test coverage
-- Operational creep in data eng
+- Analytics code coverage
+- Operational creep
+- Setting up great QA vs Prod environments
+- Singer community
 
 ---
+[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
+[.background-color: #000000]
+[.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue ]
 
+## Key Takeaways
 
-## Future
+- Standardized tooling
+- ELT >> ETL
+- GE + Singer + DBT orchestrated by Airflow
 
-1. Standardized tools for self serve data integration and processing
-2. Help develop Meltano (or an Alternative)
-3. Coverage of singer taps and targets
-
-
+^
+- Self serve for same problems
+- Meltano is a great initiative by Gitlab worth checking out
+  - Shout out to Douwe
 
 ---
 
@@ -264,6 +332,5 @@ schedules:
 7. [Projects · meltano / Meltano · GitLab](https://gitlab.com/meltano/meltano)
 8. [Advanced Data Engineering Patterns with Apache Airflow by Maxime Beauchemin](https://prezi.com/p/adxlaplcwzho/advanced-data-engineering-patterns-with-apache-airflow/)
 9. Youtube video about dbt packages
-
 
 
