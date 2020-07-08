@@ -1,10 +1,10 @@
 # Building Reuseable and Trustworthy ELT pipelines
-## A templated approach
+# A templated approach
 
 
 ---
 
-## Hello 👋!
+# Hello 👋!
 
 - Lead data @ SnapTravel
 - Data Infrastructure, data engineering, analytics engineering, service infrastructure
@@ -12,7 +12,7 @@
 
 ---
 
-## What is data engineering?
+# What is data engineering?
 
 ---
 
@@ -22,7 +22,7 @@
 
 ---
 
-## Stories
+# Stories
 
 1. Toil
 2. Data Trust
@@ -37,7 +37,7 @@ hire data engineer per data analyst
 
 ---
 
-## So much debt
+# So much debt
 
 1. Solve the same problem again and again
 2. Undocumented and Untested final result
@@ -54,7 +54,7 @@ hire data engineer per data analyst
 
 ---
 
-## The Big Idea
+# The Big Idea
 
 - Meta data engineering
 - Design Pattern with implementation/example
@@ -64,7 +64,7 @@ hire data engineer per data analyst
 
 ---
 
-## The Big Idea
+# The Big Idea
 
 
 - Empower non-technical folks to setup data integration
@@ -75,7 +75,7 @@ hire data engineer per data analyst
 
 ---
 
-## Case Study: Analyse Airflow Github Project
+# Case Study: Analyse Airflow Github Project
 
 1. Daily/Weekly/Monthly metrics
 2. Minimal amount of code/effort
@@ -83,7 +83,7 @@ hire data engineer per data analyst
 
 ---
 
-## ETL vs ELT
+# ETL vs ELT
 
 - analysts are closest to the business
 - sas companies have a lot of data sources
@@ -97,7 +97,7 @@ hire data engineer per data analyst
 
 ---
 
-## EL - Singer
+# EL - Singer
 
 - Taps and targets
 - Magic
@@ -106,7 +106,7 @@ hire data engineer per data analyst
 
 ---
 
-## EL - Singer - Lacking
+# EL - Singer - Lacking
 
 
 - Work for getting it production ready inside data pipeline
@@ -116,7 +116,7 @@ hire data engineer per data analyst
 
 ---
 
-## T - DBT
+# T - DBT
 
 - What is DBT?
 - Maintainable sql
@@ -128,7 +128,7 @@ hire data engineer per data analyst
 
 ---
 
-## Testing - GE
+# Testing - GE
 
 <Need help .. weak>
 
@@ -136,7 +136,7 @@ hire data engineer per data analyst
 
 ---
 
-## Bring it all together
+# Bring it all together
 
 <Need help .. weak>
 
@@ -146,7 +146,7 @@ Walk through meltano yml config
 
 ---
 
-## Benifits of this approach
+# Benifits of this approach
 
 1. Easily to debug code
 2. Speed to delivery
@@ -155,7 +155,7 @@ Walk through meltano yml config
 
 ---
 
-## Some problems it doesnt solve
+# Some problems it doesnt solve
 
 - Making analytics folks write enough/good data tests
 - Operational creep in data eng
@@ -163,7 +163,7 @@ Walk through meltano yml config
 ---
 
 
-## Future
+# Future
 
 1. Standardized tools for self serve data integration and processing
 2. Contribute to Meltano
@@ -173,7 +173,7 @@ Walk through meltano yml config
 
 ---
 
-## Resources
+# Resources
 
 1. [The Rise of the Data Engineer](https://www.freecodecamp.org/news/the-rise-of-the-data-engineer-91be18f1e603/)
 2. [The Future of Data Engineering](https://riccomini.name/future-data-engineering)
