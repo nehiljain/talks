@@ -1,95 +1,230 @@
-# Building Reuseable and Trustworthy ELT pipelines
-# A templated approach
+theme: Poster, 7
+text: #000000, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue
+header: #000000, alignment(center), line-height(0.7), text-scale(1.0), Rubik Medium
 
+---
+[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
+[.background-color: #000000]
+
+# [fit] Building <br> Reusable  and  Trustworthy <br> ELT pipelines
 
 ---
 
-# Hello 👋!
+[.header: #000000, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
 
-- Lead data @ SnapTravel
+
+## Hello 👋!
+
+- Lead data engineering @ SnapTravel
 - Data Infrastructure, data engineering, analytics engineering, service infrastructure
 - ![inline](https://nehiljain.com/images/stitch-icon.png) + ![inline](https://nehiljain.com/images/airflow-icon.png) + ![inline](https://surveymonkey-assets.s3.amazonaws.com/survey/280222649/324d7fd3-51ee-4548-91f7-a1dffbd9b555.png) + ![inline](https://raw.githubusercontent.com/PrefectHQ/prefect/master/docs/.vuepress/public/logos/dbt.png) stack
 
 ---
 
-# What is data engineering?
+
+[.header: #FCA831, alignment(center), line-height(0.7), text-scale(0.6), Rubik Medium]
+[.background-color: #03488B]
+
+## Been there felt that?
+
 
 ---
 
-"A data engineer's job is to **help** an organisation move and process data"
+## 🙋 Been there felt that? 🙋‍♂️
 
-- Chris Riccomini
-
----
-
-# Stories
-
-1. Toil
-2. Data Trust
-3. Data Discovery
-4. Throw over the boundary overhead
-5. Cannot scale without analysts
-6. Datapipeline vendors dont have IAC
+- Toil
+- Cannot scale Data Analytics
+- Data Discovery
+- Data Trust
+- Throw over the boundary, ambiguous ownership
 
 ^
-hire data engineer per data analyst
-
+- Hire data engineer per data analyst
+- You get attention when things are broken
+- ambiguous ownership
+- Testing
+- This dashboard seems to be broken.” Well, there go all your plans for the day. You know you’ll be spending the next few hours trying to figure out what went wrong.
+- Documentation
 
 ---
 
 # So much debt
 
-1. Solve the same problem again and again
-2. Undocumented and Untested final result
-3. Most breakages are caused by other people
-4. You get attention when things are broken
+
+- Solve the same problem again and again
+- Undocumented and Untested final result
+- Most breakages are caused by other people
 
 
----
-
-"..build tools, infrastructure, frameworks and services"
-
-- Maxime Beauchemin
-
+^
+- Data integration vendors don't have IAC
 
 ---
 
-# The Big Idea
+> ..build tools, infrastructure, frameworks and services
+-- Maxime Beauchemin
 
-- Meta data engineering
-- Design Pattern with implementation/example
+---
+[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
+[.background-color: #000000]
+[.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue ]
+
+
+## Design Requirements
+
+---
+
+![](https://i.ibb.co/W25hyxM/no-patience-amazon.jpg)
+
+^
+- Super fast delivery
+- Reuseable elements
+
+---
+
+## Single Source of Truth
+
+<todo: add a image of data supply chain with da and bo>
+
 - Standardization
-- SSOT Dag
+- Data Lineage
+- Empower non-technical folks
+
+^
+- Specificity to use case
+- Move towards self-serve
+- Easy to learn for non technical folks as there are not too many moving parts
 
 
 ---
 
-# The Big Idea
+## Easy to consume
 
+- Low barrier to entry for data analytics
+- Airflow + Other OSS
+- Ideally `pip install awesome-elt`
+- Operational creep
 
-- Empower non-technical folks to setup data integration
-- Who does this appeal to
-  - Data Engineers managing EL pipelines in house (why open source is popular)
-  - Looking to reduce cost for data pipeline
-  - Reduce barrier to entry with data analytics
+^
+- Self Serve data integration
+- Open source and not vendor lock in with upfront costs
+- Reduce debt and cost
 
 ---
 
-# Case Study: Analyse Airflow Github Project
+## Promote data integrity
 
-1. Daily/Weekly/Monthly metrics
+- Test the raw data supply
+- Automated analytics testing
+
+![inline](https://bigdata-madesimple.com/wp-content/uploads/2018/10/Accuracy.gif)
+
+
+---
+
+![fit](https://i.ibb.co/F7YMQfb/1479132315-1296081.jpg)
+
+^
+- Metadata engineering
+- Design Pattern with implementation/example
+
+---
+# Case Study: Analyse Airflow Repository
+
+1. Analyze the # of issues and pr daily
 2. Minimal amount of code/effort
 3. Secret Sauce (Meltano)
 
 ---
 
-# ETL vs ELT
+## A templated approach
+
+---
+
+```yaml
+
+version: 1
+send_anonymous_usage_stats: true
+project_id: 85d9741e-9e24-4178-a48c-2ac05e886fc1
+plugins:
+  extractors:
+  - name: tap-github
+    namespace: tap_github
+    pip_url: tap-github
+    executable: tap-github
+    capabilities:
+    - discover
+    - properties
+  loaders:
+  - name: target-postgres
+    pip_url: git+https://github.com/meltano/target-postgres.git
+  orchestrators:
+  - name: airflow
+    pip_url: wtforms==2.2.1 apache-airflow==1.10.2
+  files:
+  - name: airflow
+    pip_url: git+https://gitlab.com/meltano/files-airflow.git
+schedules:
+- name: gitlab-to-postgres
+  extractor: tap-github
+  loader: target-postgres
+  transform: skip
+  interval: '@hourly'
+  start_date: 2020-07-05 00:00:00
+```
+
+---
+
+## ETL vs ELT
+
+
+```yaml
+
+version: 1
+send_anonymous_usage_stats: true
+project_id: 85d9741e-9e24-4178-a48c-2ac05e886fc1
+plugins:
+  extractors:
+  - name: tap-github
+    namespace: tap_github
+    pip_url: tap-github
+    executable: tap-github
+    capabilities:
+    - discover
+    - properties
+  loaders:
+  - name: target-postgres
+    pip_url: git+https://github.com/meltano/target-postgres.git
+  orchestrators:
+  - name: airflow
+    pip_url: wtforms==2.2.1 apache-airflow==1.10.2
+  files:
+  - name: airflow
+    pip_url: git+https://gitlab.com/meltano/files-airflow.git
+schedules:
+- name: gitlab-to-postgres
+  extractor: tap-github
+  loader: target-postgres
+  transform: skip
+  interval: '@hourly'
+  start_date: 2020-07-05 00:00:00
+```
+
+- SAS companies have a lot of data sources
+- Agile decision making
+- Reduced complexity
+- Reduce cost
+- Timing of data supply vs data engineer vs data analyst vs business owner
+
+
+^
 
 - analysts are closest to the business
-- sas companies have a lot of data sources
+- SAS companies have a lot of data sources
 - Brittle components ~ Agile decision making
 - Reduced complexity
 - Reduce cost
+- Timing of data supply vs data engineer vs data analyst vs business owner
 
 
 ^
@@ -100,76 +235,114 @@ hire data engineer per data analyst
 # EL - Singer
 
 - Taps and targets
-- Magic
-  - Standardized communication
-  - Documentation
+
+![inline fill](https://p91.f3.n0.cdn.getcloudapp.com/items/6qu2JEKl/Screen%20Recording%202020-07-06%20at%2006.18%20pm.gif)
+
 
 ---
 
-# EL - Singer - Lacking
+## EL - Singer
 
+- Taps and targets
+- Magic
+  - Standardized communication
+  - Incremental out of the box
+  - Documentation
 
-- Work for getting it production ready inside data pipeline
-- Building new taps
-- Running in production reliably
-- Community needs some support
+^
+- Unix inspired
+- JSON
+- language-agnostic
 
 ---
 
 # T - DBT
 
+
 - What is DBT?
-- Maintainable sql
-- Modular code
-- Scale best practices
-- Resuable consitent analytics code
+
+![inline](https://p91.f3.n0.cdn.getcloudapp.com/items/yAuYnKOk/Image%202020-07-07%20at%206.46.26%20pm.png?v=9ca3e6c736f212c269f9d4cd014467bf)
+
+
+^
+- dbt model -> SQL statement
+  - relationships between models
+- Transformations in SQL
+  - SQL low learning curve
+
+---
+
+## T - DBT
+
+- Why DBT?
+  - Modular code
+  - Testing is 1st Class
+  - Data documentation support
+  - De-coupled read vs write location
+  - Great adoption
+
+
+^
+- Reusable consistent analytics code
 - Simple incremental models for big data
 - Cross-org analytics
 
 ---
 
-# Testing - GE
+## Testing - GE
 
-<Need help .. weak>
-
-- Trigger the dag after the source passes data checks0
+- Test if the data supply is good before you can trigger the dag
 
 ---
 
-# Bring it all together
+## Bring it all together
 
-<Need help .. weak>
+- Airflow is the glue to bring the ecosystem together
 
-Airflow does what it does best - Orchestrate
-Glue it all together with Meltano
-Walk through meltano yml config
+---
+[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
+[.background-color: #000000]
+[.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue ]
+
+## Some problems it doesn't solve
+
+- Visualisation/BI
+- Analytics code coverage
+- Setting up great QA vs Prod environments
+- Singer community
+
+---
+[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
+[.background-color: #000000]
+[.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue ]
+
+## Key Takeaways
+
+- Standardized tooling
+- ELT >> ETL
+- GE + Singer + DBT orchestrated by Airflow
+
+^
+- Self serve for same problems
+- Meltano is a great initiative by Gitlab worth checking out
+  - Shout out to Douwe
+
+---
+[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
+[.background-color: #000000]
+[.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue ]
+
+## Who is a <br> data engineer?
 
 ---
 
-# Benifits of this approach
-
-1. Easily to debug code
-2. Speed to delivery
-3. Tests
-4. Auto-Docs
+> A data engineer's job is to **help** an organisation move and process data
+-- Chris Riccomini
 
 ---
 
-# Some problems it doesnt solve
-
-- Making analytics folks write enough/good data tests
-- Operational creep in data eng
-
----
-
-
-# Future
-
-1. Standardized tools for self serve data integration and processing
-2. Contribute to Meltano
-3. Contribute to singer taps and targets
-
-
+> A data engineer's job is to **help** an organisation **move** and **process data**
+-- Chris Riccomini
 
 ---
 
@@ -180,10 +353,9 @@ Walk through meltano yml config
 3. [Downfall of the data engineer](https://medium.com/@maximebeauchemin/the-downfall-of-the-data-engineer-5bfb701e5d6b)
 4. [Supercharging your ETL with Airflow and Singer](https://www.stitchdata.com/blog/supercharging-etl-with-airflow-and-singer/)
 5. [Singer | Open Source ETL](https://www.singer.io/#what-it-is)
-6. [Why we are building an open source platform for ELT pipelines - Meltano](https://meltano.com/blog/2020/05/13/why-we-are-building-an-open-source-platform-for-elt-pipelines/)
+6. [Why we are building an open-source platform for ELT pipelines - Meltano](https://meltano.com/blog/2020/05/13/why-we-are-building-an-open-source-platform-for-elt-pipelines/)
 7. [Projects · meltano / Meltano · GitLab](https://gitlab.com/meltano/meltano)
-8. [Advanced Data Engineering Patterns with Apache Airflow by Maxime Beauchemin on Prezi Next](https://prezi.com/p/adxlaplcwzho/advanced-data-engineering-patterns-with-apache-airflow/)
+8. [Advanced Data Engineering Patterns with Apache Airflow by Maxime Beauchemin](https://prezi.com/p/adxlaplcwzho/advanced-data-engineering-patterns-with-apache-airflow/)
 9. Youtube video about dbt packages
-
 
 
