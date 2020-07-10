@@ -211,7 +211,6 @@ schedules:
 ```
 
 - SAS companies have a lot of data sources
-- Agile decision making
 - Reduced complexity
 - Reduce cost
 - Timing of data supply vs data engineer vs data analyst vs business owner
@@ -226,8 +225,14 @@ schedules:
 - Reduce cost
 - Timing of data supply vs data engineer vs data analyst vs business owner
 
+---
+
+![fit](https://i.ibb.co/P6VYCmr/TIming-Airflow-Talk-EL-Singer-1.png)
+
+
 
 ^
+- Agile decision making
 - people solving the problem can solve it
 
 ---
@@ -297,7 +302,9 @@ schedules:
 
 ## Bring it all together
 
-- Airflow is the glue to bring the ecosystem together
+![inline](https://i.ibb.co/RC6sjQK/Airflow-Talk-EL-Singer.png)
+
+
 
 ---
 [.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
