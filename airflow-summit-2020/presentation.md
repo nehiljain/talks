@@ -181,15 +181,6 @@ most common and traditional approach
 
 ![inline](https://bigdata-madesimple.com/wp-content/uploads/2018/10/Accuracy.gif)
 
----
-
-
-![fit](https://i.ibb.co/P6VYCmr/Timing-Airflow-Talk-EL-Singer-1.png)
-
-
-^
-- Agile decision making
-- People solving the problem can solve it
 
 
 ---
@@ -264,14 +255,27 @@ schedules:
 ---
 
 
+![fit](https://i.ibb.co/P6VYCmr/Timing-Airflow-Talk-EL-Singer-1.png)
+
+
+^
+- Agile decision making
+- People solving the problem can solve it
+
+---
+
+
+
 ## Conceptually
 
 ![inline](https://i.ibb.co/RC6sjQK/Airflow-Talk-EL-Singer.png)
 
+---
+
 ## Testing - GE
 
 - Its about expectations
--
+
 
 
 ^
