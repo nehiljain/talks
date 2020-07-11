@@ -8,6 +8,24 @@ header: #000000, alignment(center), line-height(0.7), text-scale(1.0), Rubik Med
 
 # [fit] Building <br> Reusable  and  Trustworthy <br> ELT pipelines
 
+Footer: Airflow Summit 2020
+
+
+^
+HI
+Happy to be here, what an exciting event
+I am joinng you all from Toronto
+
+
+---
+
+
+1. Context
+2. Motivation
+3. Proposed Solution
+4. Example Code
+
+
 ---
 
 [.header: #000000, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
@@ -21,6 +39,55 @@ header: #000000, alignment(center), line-height(0.7), text-scale(1.0), Rubik Med
 
 ---
 
+## How are my Metrics?
+
+- `gross_revenue`
+- `contribution_margin`
+- `number_of_active_users`
+- `retention_rate`
+- `conversion_rate`
+
+
+^
+- Very common use case
+- Non trivial to calculate
+- Eg. Definition of Revenue keeps changing
+
+---
+
+## What part of Airflow repo needs my attention?
+
+- `number_prs_merged`
+- `number_prs_closed_without_merge`
+- `number_prs_opened`
+- `number_of_commit`
+
+
+^
+I am one of the Eng Leaders
+Metrics in Context for Data-Driven Engineering Leaders
+
+---
+
+## Solution 1
+
+< todo: add image for etl>
+
+^
+most common and traditional approach
+
+
+---
+
+## Now consider scenarios
+
+- When I pushed to production, the pipeline failed after a few days
+- Now I want to focus on issues
+- Gitlab released a new version of API
+- I want to analyze other apache projects too
+- Github produced similar insights and their numbers didn't match mine
+
+---
 
 [.header: #FCA831, alignment(center), line-height(0.7), text-scale(0.6), Rubik Medium]
 [.background-color: #03488B]
@@ -33,10 +100,10 @@ header: #000000, alignment(center), line-height(0.7), text-scale(1.0), Rubik Med
 ## 🙋 Been there felt that? 🙋‍♂️
 
 - Toil
-- Cannot scale Data Analytics
 - Data Discovery
 - Data Trust
 - Throw over the boundary, ambiguous ownership
+- Cannot scale Data Analytics
 
 ^
 - Hire data engineer per data analyst
@@ -48,21 +115,16 @@ header: #000000, alignment(center), line-height(0.7), text-scale(1.0), Rubik Med
 
 ---
 
-# So much debt
+## What can I do to solve this?
 
-
-- Solve the same problem again and again
-- Undocumented and Untested final result
-- Most breakages are caused by other people
-
-
-^
-- Data integration vendors don't have IAC
+<todo: add think emoji>
 
 ---
 
 > ..build tools, infrastructure, frameworks and services
 -- Maxime Beauchemin
+
+<todo: ref to rise of data engineer>
 
 ---
 [.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
@@ -119,6 +181,16 @@ header: #000000, alignment(center), line-height(0.7), text-scale(1.0), Rubik Med
 
 ![inline](https://bigdata-madesimple.com/wp-content/uploads/2018/10/Accuracy.gif)
 
+---
+
+
+![fit](https://i.ibb.co/P6VYCmr/Timing-Airflow-Talk-EL-Singer-1.png)
+
+
+^
+- Agile decision making
+- People solving the problem can solve it
+
 
 ---
 
@@ -127,13 +199,6 @@ header: #000000, alignment(center), line-height(0.7), text-scale(1.0), Rubik Med
 ^
 - Metadata engineering
 - Design Pattern with implementation/example
-
----
-# Case Study: Analyse Airflow Repository
-
-1. Analyze the # of issues and pr daily
-2. Minimal amount of code/effort
-3. Secret Sauce (Meltano)
 
 ---
 
@@ -177,63 +242,59 @@ schedules:
 
 ## ETL vs ELT
 
-
-```yaml
-
-version: 1
-send_anonymous_usage_stats: true
-project_id: 85d9741e-9e24-4178-a48c-2ac05e886fc1
-plugins:
-  extractors:
-  - name: tap-github
-    namespace: tap_github
-    pip_url: tap-github
-    executable: tap-github
-    capabilities:
-    - discover
-    - properties
-  loaders:
-  - name: target-postgres
-    pip_url: git+https://github.com/meltano/target-postgres.git
-  orchestrators:
-  - name: airflow
-    pip_url: wtforms==2.2.1 apache-airflow==1.10.2
-  files:
-  - name: airflow
-    pip_url: git+https://gitlab.com/meltano/files-airflow.git
-schedules:
-- name: gitlab-to-postgres
-  extractor: tap-github
-  loader: target-postgres
-  transform: skip
-  interval: '@hourly'
-  start_date: 2020-07-05 00:00:00
-```
-
 - SAS companies have a lot of data sources
 - Reduced complexity
 - Reduce cost
-- Timing of data supply vs data engineer vs data analyst vs business owner
+- Speed of delivery
 
 
 ^
+- ETL requires work to manually script various usecases into a pipeline
+- ELT is load once and transform as much as you want (speed)
+- Possible because of cloud based data warehouses
 
-- analysts are closest to the business
-- SAS companies have a lot of data sources
-- Brittle components ~ Agile decision making
+- Flexibility of capturing all the data
+- Speed of delivery
+  - data always available
+  - Brittle components ~ Agile decision making
+  - analysts are closest to the business
 - Reduced complexity
 - Reduce cost
-- Timing of data supply vs data engineer vs data analyst vs business owner
 
 ---
 
-![fit](https://i.ibb.co/P6VYCmr/TIming-Airflow-Talk-EL-Singer-1.png)
 
+## Conceptually
+
+![inline](https://i.ibb.co/RC6sjQK/Airflow-Talk-EL-Singer.png)
+
+## Testing - GE
+
+- Its about expectations
+-
 
 
 ^
-- Agile decision making
-- people solving the problem can solve it
+- Declarative assertions like expect col to not have null or expect col to have min and max of foo and bar
+- Data sources
+- Examine batch of data
+
+^
+- A python library and cli tool
+- Helps you validate your expectations against a batch of data
+
+
+---
+
+## Magic
+
+- Profiling
+- Data Docs
+- Send notifications automatically
+
+
+^
+extensive
 
 ---
 
@@ -241,23 +302,37 @@ schedules:
 
 - Taps and targets
 
-![inline fill](https://p91.f3.n0.cdn.getcloudapp.com/items/6qu2JEKl/Screen%20Recording%202020-07-06%20at%2006.18%20pm.gif)
+<todo: image of tap and target>
 
+^
+focus on the what
 
 ---
 
 ## EL - Singer
 
-- Taps and targets
 - Magic
   - Standardized communication
   - Incremental out of the box
   - Documentation
 
 ^
+- WHY
 - Unix inspired
 - JSON
 - language-agnostic
+
+---
+
+
+![fit](https://i.ibb.co/HG40Mns/screencapture-www-singer-io-1594430740171.png)
+
+---
+
+## Its a long list
+
+![fit](https://i.ibb.co/HG40Mns/screencapture-www-singer-io-1594430740171.png)
+
 
 ---
 
@@ -270,6 +345,7 @@ schedules:
 
 
 ^
+- Focus on what
 - dbt model -> SQL statement
   - relationships between models
 - Transformations in SQL
@@ -277,9 +353,14 @@ schedules:
 
 ---
 
+![fit](https://docs.getdbt.com/img/docs/building-a-dbt-project/dbt-docs-screenshot.png)
+
+---
+
+
 ## T - DBT
 
-- Why DBT?
+- Magic
   - Modular code
   - Testing is 1st Class
   - Data documentation support
@@ -292,31 +373,33 @@ schedules:
 - Simple incremental models for big data
 - Cross-org analytics
 
----
-
-## Testing - GE
-
-- Test if the data supply is good before you can trigger the dag
-
----
-
-## Bring it all together
-
-![inline](https://i.ibb.co/RC6sjQK/Airflow-Talk-EL-Singer.png)
-
-
 
 ---
 [.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
 [.background-color: #000000]
 [.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue ]
 
-## Some problems it doesn't solve
 
-- Visualisation/BI
+---
+
+## Case Study Report
+
+
+---
+
+## Code Sample
+
+---
+## Some challenges out there
+
+- Visualisation/BI layer
 - Analytics code coverage
-- Setting up great QA vs Prod environments
 - Singer community
+
+^
+There can be tranforms done in the last mile of Bi layer which can break when you schema of the transformed models change
+Analyts are new to the game of software engineering practices
+Singer community can be challenging to work with sometimes
 
 ---
 [.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
@@ -334,22 +417,6 @@ schedules:
 - Meltano is a great initiative by Gitlab worth checking out
   - Shout out to Douwe
 
----
-[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Rubik Medium]
-[.background-color: #000000]
-[.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), Helvetica Neue ]
-
-## Who is a <br> data engineer?
-
----
-
-> A data engineer's job is to **help** an organisation move and process data
--- Chris Riccomini
-
----
-
-> A data engineer's job is to **help** an organisation **move** and **process data**
--- Chris Riccomini
 
 ---
 
