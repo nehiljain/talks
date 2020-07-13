@@ -30,7 +30,7 @@ footer: Airflow Summit 2020, *[@nehiljain](https://twitter.com/nehiljain)*
 
 ---
 
-# Context
+## Context
 
 
 ---
@@ -121,9 +121,6 @@ most common and traditional approach
 - loss of trust
 
 ---
-
-[.header: #FCA831, alignment(center), line-height(0.7), text-scale(0.6), Playfair Display]
-[.background-color: #03488B]
 
 ## Been there felt that?
 
