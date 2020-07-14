@@ -377,7 +377,7 @@ most common and traditional approach
 
 ---
 
-## Its a long list
+## It's a long list
 
 ![fit](https://i.ibb.co/HG40Mns/screencapture-www-singer-io-1594430740171.png)
 
