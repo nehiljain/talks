@@ -379,6 +379,7 @@ Nehil Jain
 Slack: @nehiljain
 [nehiljain.com](nehiljain.com)
 
+
 ---
 
 # Resources
@@ -393,3 +394,4 @@ Slack: @nehiljain
 8. https://www.crowdcast.io/e/airflowsummit/15
 9. https://www.crowdcast.io/e/airflowsummit/14
 10. https://analyticsmayhem.com/dbt/schedule-dbt-models-with-apache-airflow/?icmp=related
+11. https://meltano.com/

@@ -15,7 +15,8 @@ footer: Airflow Summit 2020, *[@nehiljain](https://twitter.com/nehiljain)*
 
 ^
 - Hi
-- Happy to be here, what an exciting event
+- Happy to be here
+- What an exciting event
 - Joining you all from Toronto
 - Thank you for the great content
 
@@ -37,14 +38,17 @@ footer: Airflow Summit 2020, *[@nehiljain](https://twitter.com/nehiljain)*
 
 ---
 
-[.header: #000000, alignment(center), line-height(1.0), text-scale(1.0), Playfair Display]
-
+[.text: #000000, alignment(left), line-height(0.9), text-scale(0.7), PT Sans]
 
 ## Hello 👋!
 
 - Data engineer @ SnapTravel
+- SnapTravel
+  - M-commerce startup
+  - Data team: 8, Data Sources: 86
 - Data infrastructure, Data engineering, Analytics engineering
 - ![inline](https://nehiljain.com/images/stitch-icon.png) + ![inline](https://nehiljain.com/images/airflow-icon.png) + ![inline](https://surveymonkey-assets.s3.amazonaws.com/survey/280222649/324d7fd3-51ee-4548-91f7-a1dffbd9b555.png) + ![inline](https://raw.githubusercontent.com/PrefectHQ/prefect/master/docs/.vuepress/public/logos/dbt.png) stack
+
 
 ---
 
@@ -59,6 +63,7 @@ Share 🧰 BI pipelines
 
 ^
 - toolset
+- data analytics pipeline out of all pipelines
 - inspire community
 - get fedback
 
@@ -74,10 +79,11 @@ Share 🧰 BI pipelines
 
 
 ^
-- Very common use case
-  - Definition revenue changing
 - Non trivial to calculate
-- Eg. Definition of Revenue keeps changing
+- Very common use case
+- Definition revenue changing
+
+
 
 ---
 
@@ -86,7 +92,7 @@ Share 🧰 BI pipelines
 - `number_prs_merged`
 - `number_prs_closed_without_merge`
 - `number_prs_opened`
-- `number_of_commit`
+- `number_of_commits`
 
 
 ^
@@ -109,46 +115,51 @@ most common and traditional approach
 
 ## Let us consider
 
-- The pipeline failed <br> after a few days of productionization
-- Now I want to focus on issues
+- The pipeline failed in production
+- Shift focus on to issues, comments
 - Gitlab released a new version of API
 - I want to analyze other apache projects too
 - Github produced similar insights and their numbers didn't match mine
 
 ^
 - failed because
-  - data broke, null values in the index column
+  - data broke, null values
 - issues, comments etc
 - schema changes, analysts usage
+- redo work for other repos
 - loss of trust
+
 
 ---
 
 ## 🙋 Been there done that? 🙋‍♂️
 
+^
+At this point, non virtually see people
 
 ---
 
 ## Classify the problems
 
 - Toil
+- Cannot scale Data Analytics
 - Data Discovery
 - Data Trust
 - Throw over the boundary
 - Ambiguous ownership
-- Cannot scale Data Analytics
+
 
 ^
-- toil
+- data analytics pipeline out of all pipelines
+- You get attention when things are broken
+- Toil
   - requirements keep changing
   - tightly coupled components need tweaking
   - hire data engineer per data analyst
 - Imp tables not documented
-- You get attention when things are broken
 - Testing
 - Most breakages are caused by others
-- long cycle to delivery
-- Documentation
+- Long cycle to delivery
 
 ---
 
@@ -240,6 +251,7 @@ most common and traditional approach
 
 
 ^
+- adapt to frequency of change in data analytics lifecycle
 - Agile decision making
 - People solving the problem can solve it
 
@@ -316,10 +328,6 @@ most common and traditional approach
 - Declarative assertions like expect col to not have null or expect col to have min and max of foo and bar
 - Data sources
 - Examine batch of data
-
-^
-- A python library
-- Helps you validate your expectations against a batch of data
 
 ---
 
@@ -495,6 +503,7 @@ meltano add orchestrator airflow
 ```
 
 ^
+35 min mark
 The team is hungry for feedback
 
 
@@ -596,6 +605,5 @@ Singer community can be challenging to work with sometimes
 - [Singer | Open Source ETL](https://www.singer.io/#what-it-is)
 - [Why we are building an open-source platform for ELT pipelines - Meltano](https://meltano.com/blog/2020/05/13/why-we-are-building-an-open-source-platform-for-elt-pipelines/)
 - [Dbt Docs](https://docs.getdbt.com/docs/introduction)
-- []
 
 
