@@ -9,6 +9,7 @@ footer: Airflow Summit 2020, *[@nehiljain](https://twitter.com/nehiljain)*
 [.background-color: #000000]
 [.footer-style: #ffffff, alignment(right), line-height(0.9), text-scale(0.8), PT Sans]
 
+![](https://i.ibb.co/44qq2pj/Whats-App-Image-2020-07-13-at-2-32-38-PM.jpg)
 # Building <br> Reusable and Trustworthy <br> pipelines
 
 
@@ -30,6 +31,7 @@ footer: Airflow Summit 2020, *[@nehiljain](https://twitter.com/nehiljain)*
 
 ---
 
+![](https://i.ibb.co/wKgRQ7z/Whats-App-Image-2020-07-13-at-10-03-00-PM-2.jpg)
 ## Context
 
 
@@ -62,7 +64,7 @@ Share 🧰 BI pipelines
 
 ---
 
-## How are my 📈?
+## How are my company 📈?
 
 - `gross_revenue`
 - `contribution_margin`
@@ -79,7 +81,7 @@ Share 🧰 BI pipelines
 
 ---
 
-## What part of Airflow repo needs my attention?
+## Hows my airflow repo 📈?
 
 - `number_prs_merged`
 - `number_prs_closed_without_merge`
@@ -122,17 +124,18 @@ most common and traditional approach
 
 ---
 
-## Been there felt that?
+## 🙋 Been there done that? 🙋‍♂️
 
 
 ---
 
-## 🙋 Been there felt that? 🙋‍♂️
+## Classify the problems
 
 - Toil
 - Data Discovery
 - Data Trust
-- Throw over the boundary, ambiguous ownership
+- Throw over the boundary
+- Ambiguous ownership
 - Cannot scale Data Analytics
 
 ^
@@ -149,7 +152,7 @@ most common and traditional approach
 
 ---
 
-## What can I do to solve this?
+## What can we do to solve this?
 
 ![](https://i.ibb.co/gryrfG8/Whats-App-Image-2020-07-12-at-5-56-34-PM.jpg)
 
@@ -278,6 +281,7 @@ most common and traditional approach
 [.background-color: #000000]
 [.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), PT Sans ]
 
+![](https://i.ibb.co/gdKB5Hd/Whats-App-Image-2020-07-13-at-2-30-20-PM.jpg)
 
 ## Validate your source data
 
@@ -336,7 +340,7 @@ most common and traditional approach
 [.background-color: #000000]
 [.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), PT Sans ]
 
-
+![](https://i.ibb.co/tBkMQtx/Whats-App-Image-2020-07-13-at-10-03-01-PM.jpg)
 ## Extract - Load
 
 ---
@@ -352,6 +356,12 @@ most common and traditional approach
 - Data extraction and loading
 - Taps -  extract and output to standard stream
 - Target - consume data and put it somewhere
+
+---
+
+```bash
+tap-github --config tap_config.json | target-postgres --config target_config.json >> state.json
+```
 
 ---
 
@@ -388,7 +398,7 @@ most common and traditional approach
 [.background-color: #000000]
 [.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), PT Sans ]
 
-
+![](https://i.ibb.co/fn3JYjQ/Whats-App-Image-2020-07-14-at-8-49-56-PM.jpg)
 ## Transform
 
 ---
@@ -400,11 +410,18 @@ most common and traditional approach
 
 
 ^
-- Focus on what
-- dbt model -> SQL statement
-  - relationships between models
+- Transform data effectively
+- Reads and writes from warehouse
+- powerful cloud data warehouses enable
 - Transformations in SQL
 
+---
+
+![fit](https://i.ibb.co/Qjt5syP/dbt-model-dependency-gif.gif)
+
+^
+- dbt model -> SQL statement
+  - relationships between models
 
 ---
 
@@ -513,6 +530,15 @@ The team is hungry for feedback
 ![fit](https://i.ibb.co/FHXW3HG/airflow-dag-config.png)
 
 ---
+
+![](https://i.ibb.co/T0PdZC8/Whats-App-Image-2020-07-14-at-8-49-57-PM.jpg)
+
+## Sit back & Relax
+
+
+---
+
+
 ## Some challenges out there
 
 - Visualisation/BI layer
@@ -525,9 +551,7 @@ Analysts are new to the game of software engineering practices
 Singer community can be challenging to work with sometimes
 
 ---
-[.header: #ffffff, alignment(center), line-height(1.0), text-scale(1.0), Playfair Display]
-[.background-color: #000000]
-[.text: #ffffff, alignment(left), line-height(0.9), text-scale(0.8), PT Sans ]
+
 
 ## Key Takeaways
 
@@ -544,16 +568,34 @@ Singer community can be challenging to work with sometimes
 
 ---
 
+![](https://i.ibb.co/S67FVVt/Whats-App-Image-2020-07-13-at-10-03-00-PM.jpg)
+
+## Thanks
+
+---
+
+![](https://i.ibb.co/TbJK4Bz/Whats-App-Image-2020-07-14-at-8-49-56-PM-1.jpg)
+
+## Q & A
+
+---
+
 # Resources
 
-1. [The Rise of the Data Engineer](https://www.freecodecamp.org/news/the-rise-of-the-data-engineer-91be18f1e603/)
-2. [The Future of Data Engineering](https://riccomini.name/future-data-engineering)
-3. [Downfall of the data engineer](https://medium.com/@maximebeauchemin/the-downfall-of-the-data-engineer-5bfb701e5d6b)
-4. [Supercharging your ETL with Airflow and Singer](https://www.stitchdata.com/blog/supercharging-etl-with-airflow-and-singer/)
-5. [Singer | Open Source ETL](https://www.singer.io/#what-it-is)
-6. [Why we are building an open-source platform for ELT pipelines - Meltano](https://meltano.com/blog/2020/05/13/why-we-are-building-an-open-source-platform-for-elt-pipelines/)
-7. [Projects · meltano / Meltano · GitLab](https://gitlab.com/meltano/meltano)
-8. [Advanced Data Engineering Patterns with Apache Airflow by Maxime Beauchemin](https://prezi.com/p/adxlaplcwzho/advanced-data-engineering-patterns-with-apache-airflow/)
-9. Youtube video about dbt packages
+- [Meltano Project](https://meltano.com/)
+- [Advanced Data Engineering Patterns with Apache Airflow by Maxime Beauchemin](https://prezi.com/p/adxlaplcwzho/advanced-data-engineering-patterns-with-apache-airflow/)
+- [The Rise of the Data Engineer](https://www.freecodecamp.org/news/the-rise-of-the-data-engineer-91be18f1e603/)
+- [The Future of Data Engineering](https://riccomini.name/future-data-engineering)
+- [Downfall of the data engineer](https://medium.com/@maximebeauchemin/the-downfall-of-the-data-engineer-5bfb701e5d6b)
+- [Supercharging your ETL with Airflow and Singer](https://www.stitchdata.com/blog/supercharging-etl-with-airflow-and-singer/)
+
+---
+
+# Resources
+
+- [Singer | Open Source ETL](https://www.singer.io/#what-it-is)
+- [Why we are building an open-source platform for ELT pipelines - Meltano](https://meltano.com/blog/2020/05/13/why-we-are-building-an-open-source-platform-for-elt-pipelines/)
+- [Dbt Docs](https://docs.getdbt.com/docs/introduction)
+- []
 
 

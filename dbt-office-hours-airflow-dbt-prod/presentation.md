@@ -95,6 +95,10 @@ Share 🧰 DBT pipelines
 all of this is dbt pipeline specific
 
 ---
+[.background-color: #3C696B]
+## Tasks
+
+---
 
 # BashOperator
 
@@ -120,6 +124,10 @@ Thanks Andrew @ GoCardless
 - 🔔 Lacking completeness
 
 ![right fit](https://i.ibb.co/c1ssxTB/airflow-operators.png)
+
+---
+[.background-color: #3C696B]
+## Dags
 
 ---
 
@@ -181,11 +189,8 @@ Thanks Andrew @ GoCardless
 [.build-lists: true]
 
 - One Time
-  - Generate using CI pipeline
 - Sources ELT
 - De-coupled with sources
-  - Nightly
-  - Hourly
 - Convert dbt dag to airflow dag
 
 ^
@@ -198,6 +203,7 @@ Minimise the number of jobs
 - `dbt deps`
 - `dbt seed`
 - `dbt docs generate`
+- Run inside CI Pipeline
 
 ---
 
@@ -211,7 +217,7 @@ Minimise the number of jobs
 ---
 
 
-# Nightly Run
+# De-coupled with sources: Nightly
 
 ```yaml
 nightly_dbt_dag:
@@ -237,10 +243,10 @@ nightly_dbt_dag:
 ---
 
 
-# Hourly Run
+# De-coupled with sources: Hourly
 
 ```yaml
-hourly_dbt_dag
+hourly_dbt_dag:
   default_args:
     owner: 'dbt_owner'
     start_date: 2018-01-01
@@ -266,10 +272,11 @@ hourly_dbt_dag
 
 - Tag adhoc
   - Cold Start
-  - Backfill some change
+  - Backfill incremental models
 - 🔔 Exclude adhoc for all the other runs
 
 ---
+
 [.background-color: #D48533]
 # Deployment
 
@@ -292,7 +299,7 @@ hourly_dbt_dag
 # Google Cloud Compose
 
 [.column]
-- All things similar to Astro
+- All things similar to Astronomer
 - Sync code via GCS
 - GCP all the way
 
