@@ -47,7 +47,7 @@ footer: Airflow Summit 2020, *[@nehiljain](https://twitter.com/nehiljain)*
   - M-commerce startup
   - Data team: 8, Data Sources: 86
 - Data infrastructure, Data engineering, Analytics engineering
-- ![inline](https://nehiljain.com/images/stitch-icon.png) + ![inline](https://nehiljain.com/images/airflow-icon.png) + ![inline](https://surveymonkey-assets.s3.amazonaws.com/survey/280222649/324d7fd3-51ee-4548-91f7-a1dffbd9b555.png) + ![inline](https://raw.githubusercontent.com/PrefectHQ/prefect/master/docs/.vuepress/public/logos/dbt.png) stack
+- ![inline](../images/stitch-icon.png) + ![inline](../images/airflow-icon.png) + ![inline](https://surveymonkey-assets.s3.amazonaws.com/survey/280222649/324d7fd3-51ee-4548-91f7-a1dffbd9b555.png) + ![inline](https://raw.githubusercontent.com/PrefectHQ/prefect/master/docs/.vuepress/public/logos/dbt.png) stack
 
 
 ---

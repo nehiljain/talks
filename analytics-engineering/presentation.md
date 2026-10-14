@@ -1,5 +1,5 @@
 autoscale: true
-footer: Twitter: @nehiljain, Website: nehiljain.com
+footer: Twitter: @nehiljain, Website: nehiljain.github.io
 [.hide-footer]
 
 # What is
@@ -10,7 +10,7 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 ## Hello 👋!
 
 - Lead data @ SnapTravel
-- ![inline](https://nehiljain.com/images/stitch-icon.png) + ![inline](https://nehiljain.com/images/airflow-icon.png) + ![inline](https://surveymonkey-assets.s3.amazonaws.com/survey/280222649/324d7fd3-51ee-4548-91f7-a1dffbd9b555.png) + ![inline](https://raw.githubusercontent.com/PrefectHQ/prefect/master/docs/.vuepress/public/logos/dbt.png) stack
+- ![inline](../images/stitch-icon.png) + ![inline](../images/airflow-icon.png) + ![inline](https://surveymonkey-assets.s3.amazonaws.com/survey/280222649/324d7fd3-51ee-4548-91f7-a1dffbd9b555.png) + ![inline](https://raw.githubusercontent.com/PrefectHQ/prefect/master/docs/.vuepress/public/logos/dbt.png) stack
 - Love helping people get value from data
 
 
@@ -26,13 +26,13 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 
 [.background-color: #FFFFFF]
 
-![Fit](https://nehiljain.com/images/journey-cdw-2.png)
+![Fit](../images/journey-cdw-2.png)
 
 ---
 
 [.background-color: #686868 ]
 
-![Fit, Fiitered](https://nehiljain.com/images/journey-cdw-faded-3.png)
+![Fit, Fiitered](../images/journey-cdw-faded-3.png)
 
 ## MPP in the cloud
 
@@ -59,7 +59,7 @@ footer: Twitter: @nehiljain, Website: nehiljain.com
 [.background-color: #FFFFFF]
 [.hide-footer]
 
-![FIT](https://nehiljain.com/images/journey-analytics.png)
+![FIT](../images/journey-analytics.png)
 
 
 ^ evolved over time, in part to see where it’s been, and more importantly, to see where it’s going next.
@@ -77,7 +77,7 @@ SSOT
 
 ---
 
-![inline](https://nehiljain.com/images/data-team-old.png)
+![inline](../images/data-team-old.png)
 
 - Compute was expensive or complex
 - Few Data team(s)
@@ -87,7 +87,7 @@ SSOT
 
 ---
 
-![inline](https://nehiljain.com/images/data-team-new.png)
+![inline](../images/data-team-new.png)
 
 
 - Domain experts close to data
@@ -113,7 +113,7 @@ Still lot of uncertainity
 
 [.background-color: #686868 ]
 
-![FIT](https://nehiljain.com/images/modern-stack-faded-2.png)
+![FIT](../images/modern-stack-faded-2.png)
 
 - Salient Features
   - DI as a service
@@ -127,7 +127,7 @@ Still lot of uncertainity
 
 ## Analytics Engineering
 
-![FIT](https://nehiljain.com/images/analytics-engineering-2.png)
+![FIT](../images/analytics-engineering-2.png)
 
 
 ^ Production grade ELT code
@@ -192,7 +192,7 @@ Build self-serve BI platform and educate org
 
 ---
 
-![Fit](https://nehiljain.com/images/analytics-engineer-postings.gif)
+![Fit](../images/analytics-engineer-postings.gif)
 
 ---
 
